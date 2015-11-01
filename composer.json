@@ -1,0 +1,18 @@
+{
+    "name": "soguspider/sogouspider",
+    "description": "The sogou spider.",
+    "keywords": ["spider", "sogouspider"],
+    "license": "MIT",
+    "type": "project",
+    "require-dev": {
+        "electrolinux/phpquery": "0.9.6"
+
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "repositories": [
+        {"type": "composer", "url": "http://packagist.phpcomposer.com"},
+        {"packagist": false}
+    ]
+}
