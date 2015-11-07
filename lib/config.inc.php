@@ -1,2 +1,4 @@
 <?php
-$key = array('备孕','备孕','备孕','备孕','备孕','备孕','备孕','备孕');
+//http://w.sugg.sogou.com/sugg/ajaj_json.jsp?key=孕&type=wxpub&ori=yes&pr=web&abtestid=&ipn=
+/** @var TYPE_NAME $keywords */
+$keywords = array('备孕','胎教','母婴','怀孕');
