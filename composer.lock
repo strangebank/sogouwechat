@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d0580516afbc9dfe3f3399be52142792",
-    "content-hash": "823e19aad6ef2984f57553c375250c7c",
+    "hash": "c7be023c853e65cff47801bf5ddde2fa",
+    "content-hash": "53a5270dad9195341c07e227a1e03d73",
     "packages": [],
     "packages-dev": [
         {
@@ -47,13 +47,87 @@
             "description": "phpQuery is a server-side, chainable, CSS3 selector driven Document Object Model (DOM) API based on jQuery JavaScript Library",
             "homepage": "http://code.google.com/p/phpquery/",
             "time": "2013-03-21 12:39:33"
+        },
+        {
+            "name": "fifths/pinyin",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fifths/Pinyin.git",
+                "reference": "bb42954e4dc2ab78493e071b4ebad9c03b44f8bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://packagist.phpcomposer.com/files/fifths/Pinyin/bb42954e4dc2ab78493e071b4ebad9c03b44f8bb.zip",
+                "reference": "bb42954e4dc2ab78493e071b4ebad9c03b44f8bb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Pinyin\\": "src/Pinyin/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "lee"
+                }
+            ],
+            "description": "php pinyin class",
+            "time": "2015-10-30 09:24:16"
+        },
+        {
+            "name": "snoopy/snoopy",
+            "version": "2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PheRum/snoopy.git",
+                "reference": "660134bc1cfd52c00ded91928320dd4e775ff4d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://packagist.phpcomposer.com/files/PheRum/snoopy/660134bc1cfd52c00ded91928320dd4e775ff4d9.zip",
+                "reference": "660134bc1cfd52c00ded91928320dd4e775ff4d9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Snoopy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv2"
+            ],
+            "authors": [
+                {
+                    "name": "Andrei Zmievski"
+                }
+            ],
+            "description": "snoopy",
+            "time": "2015-07-25 20:02:14"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "fifths/pinyin": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=5.4"
+    },
     "platform-dev": []
 }

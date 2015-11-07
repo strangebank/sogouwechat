@@ -4,9 +4,13 @@
     "keywords": ["spider", "sogouspider"],
     "license": "MIT",
     "type": "project",
+    "require": {
+        "php": ">=5.4"
+    },
     "require-dev": {
-        "electrolinux/phpquery": "0.9.6"
-
+        "electrolinux/phpquery": "0.9.6",
+        "fifths/pinyin": "*@dev",
+        "snoopy/snoopy":"2.0"
     },
     "config": {
         "preferred-install": "dist"

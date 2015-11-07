@@ -40,5 +40,79 @@
         ],
         "description": "phpQuery is a server-side, chainable, CSS3 selector driven Document Object Model (DOM) API based on jQuery JavaScript Library",
         "homepage": "http://code.google.com/p/phpquery/"
+    },
+    {
+        "name": "snoopy/snoopy",
+        "version": "2.0",
+        "version_normalized": "2.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PheRum/snoopy.git",
+            "reference": "660134bc1cfd52c00ded91928320dd4e775ff4d9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "http://packagist.phpcomposer.com/files/PheRum/snoopy/660134bc1cfd52c00ded91928320dd4e775ff4d9.zip",
+            "reference": "660134bc1cfd52c00ded91928320dd4e775ff4d9",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4"
+        },
+        "time": "2015-07-25 20:02:14",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Snoopy\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPLv2"
+        ],
+        "authors": [
+            {
+                "name": "Andrei Zmievski"
+            }
+        ],
+        "description": "snoopy"
+    },
+    {
+        "name": "fifths/pinyin",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/fifths/Pinyin.git",
+            "reference": "bb42954e4dc2ab78493e071b4ebad9c03b44f8bb"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "http://packagist.phpcomposer.com/files/fifths/Pinyin/bb42954e4dc2ab78493e071b4ebad9c03b44f8bb.zip",
+            "reference": "bb42954e4dc2ab78493e071b4ebad9c03b44f8bb",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3"
+        },
+        "time": "2015-10-30 09:24:16",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Pinyin\\": "src/Pinyin/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "lee"
+            }
+        ],
+        "description": "php pinyin class"
     }
 ]
