@@ -8,7 +8,7 @@
 function curl_get_file_contents($url)
 {
     showAuthcode('http://weixin.sogou.com/antispider/util/seccode.php?tc='.time());
-    $cookieFile = SCRIPT_ROOT.'cookie.tmp';
+    $cookieFile = SCRIPT_ROOT.'cookie.txt';
 
     $ch = curl_init();
     curl_setopt($ch,CURLOPT_COOKIEFILE, $cookieFile); //同时发送Cookie
@@ -57,7 +57,8 @@ function mkdirs($dir, $mode = 0777) {
  */
 function showAuthcode( $authcode_url )
 {
-    $cookieFile = SCRIPT_ROOT.'cookie.tmp';
+    $cookieFile = SCRIPT_ROOT.'cookie.txt';
+    if(file_exists($cookieFile))return true;
     $ch = curl_init($authcode_url);
     curl_setopt($ch,CURLOPT_COOKIEJAR, $cookieFile); // 把返回来的cookie信息保存在文件中
     curl_exec($ch);
