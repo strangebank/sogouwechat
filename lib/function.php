@@ -7,11 +7,11 @@
  */
 function curl_get_file_contents($url)
 {
-    showAuthcode('http://weixin.sogou.com/antispider/util/seccode.php?tc='.time());
-    $cookieFile = SCRIPT_ROOT.'cookie.txt';
+   # showAuthcode('http://weixin.sogou.com/antispider/util/seccode.php?tc='.time());
+    #$cookieFile = SCRIPT_ROOT.'cookie.txt';
 
     $ch = curl_init();
-    curl_setopt($ch,CURLOPT_COOKIEFILE, $cookieFile); //同时发送Cookie
+    #curl_setopt($ch,CURLOPT_COOKIEFILE, $cookieFile); //同时发送Cookie
     curl_setopt($ch,CURLOPT_URL,$url);
     curl_setopt($ch,CURLOPT_HEADER,true);
     curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
@@ -63,4 +63,22 @@ function showAuthcode( $authcode_url )
     curl_setopt($ch,CURLOPT_COOKIEJAR, $cookieFile); // 把返回来的cookie信息保存在文件中
     curl_exec($ch);
     curl_close($ch);
+}
+function http_get($url){
+    $oCurl = curl_init();
+    if (stripos($url, "https://") !== FALSE) {
+        curl_setopt($oCurl, CURLOPT_SSL_VERIFYPEER, FALSE);
+        curl_setopt($oCurl, CURLOPT_SSL_VERIFYHOST, FALSE);
+        curl_setopt($oCurl, CURLOPT_SSLVERSION, 1); //CURL_SSLVERSION_TLSv1
+    }
+    curl_setopt($oCurl, CURLOPT_URL, $url);
+    curl_setopt($oCurl, CURLOPT_RETURNTRANSFER, 1);
+    $sContent = curl_exec($oCurl);
+    $aStatus = curl_getinfo($oCurl);
+    curl_close($oCurl);
+    if (intval($aStatus["http_code"]) == 200) {
+        return $sContent;
+    } else {
+        return false;
+    }
 }
